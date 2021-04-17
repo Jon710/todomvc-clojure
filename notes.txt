@@ -1,0 +1,19 @@
+In this case, Clojure's sorted-map was used to store todos by id.
+Each todo will be a map.
+EX: {:id 1, :title "Brasil Paralelo", :done false}
+
+Reagent atoms is used to update the app state. 
+Reagent atom reacts to changes. Reagent keeps track of the components the atom is dereferenced in 
+and then rerenders those components and any of their child components when the atom is changed.
+A reactive reagent atom is referred to as a ratom.
+
+defonce is used to bind the variable when the app hot-reloads.
+
+swap! updates the todos ratom by replacing the old ones.
+
+add-watch monitors the todos atom. It takes 3 arguments (atom to be watched, a key specified by the dev, watch function).
+It's really helpful to debug the app.
+
+cljs.pprint lib pretty-prints the state.
+
+
